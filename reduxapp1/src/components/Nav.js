@@ -1,5 +1,10 @@
 import React from 'react';
 import '../css/nav.css';
+
+import {InnerNav} from './innerComponents/InnerNav';
 export function Nav(props){
-  return <nav>nav</nav>
+  return (
+    <nav>
+      <InnerNav />
+    </nav>)
 }
