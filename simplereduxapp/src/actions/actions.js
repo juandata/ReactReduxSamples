@@ -7,7 +7,7 @@
  */
 
 export const ADD_TODO = "ADD_TODO";
-export const COMPLETE_TODO = "COMPLETE_TODO";
+export const TOGGLE_TODO = 'TOGGLE_TODO'
 export const SET_VISIBILITY_FILTER = "SET_VISIBILITY_FILTER";
 
 /*
@@ -23,7 +23,7 @@ export const VisibilityFilters = {
 /*
  * creadores de acciones
  En redux los creadores retornan una acción. Esto las
- hace más portables y fáciles de probar. Para efectivamente inicial
+ hace más portables y fáciles de probar. Para efectivamente iniciar
   un despacho, pasa el resultado a la función dispatch():
  dispatch(addTodo(text))
 dispatch(completeTodo(index))
@@ -42,8 +42,8 @@ export function addTodo(text) {
   return { type: ADD_TODO, text };
 }
 
-export function completeTodo(index) {
-  return { type: COMPLETE_TODO, index };
+export function toggleTodo(index) {
+  return { type: TOGGLE_TODO, index }
 }
 
 export function setVisibilityFilter(filter) {

@@ -1,16 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import "./index.css";
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import todoApp from './reducers/reducers'
+import App from './components/App'
 
-// Add these imports - Step 1
-import { Provider } from "react-redux";
-import { store } from "./redux";
+let store = createStore(todoApp)
 
-// Wrap existing app in Provider - Step 2
-ReactDOM.render(
+render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById("root")
-);
+  document.getElementById('root')
+)
