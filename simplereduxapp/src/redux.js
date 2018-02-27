@@ -31,5 +31,5 @@ export function configureStore(initialState = {}) {
   const store = createStore(reducers, initialState);
   return store;
 }
-
+//parece que esta constante es el store que contiene el estado inicial, los reducers y el initialstate
 export const store = configureStore();
