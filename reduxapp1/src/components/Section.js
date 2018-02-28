@@ -1,6 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import '../css/section.css';
-export function Section(props){
-  return <section>section</section>
+import * as vistas from "./innerComponents/logic/SectionLogic";
+
+import "../css/section.css";
+
+export class Section extends React.Component {
+  render() {
+    return <section>{vistas.Home}</section>;
+  }
 }
