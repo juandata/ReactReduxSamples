@@ -11,20 +11,17 @@ id = home entonces renderizar en section Home
 si id = page2 entonces renderizar page2
 
 */
-import { changeView } from "./actions";
+import { change_View } from "./actions";
 
-function ChangeViewReducer(state = initialState, action) {
+
+
+export default function ChangeViewReducer(state = { menu: ''}, action) {
   switch (action.type) {
-    case "Home":
+    case change_View:
       return Object.assign({}, state, {
-        id: action.id
-      });
-    case "Page2":
-      return Object.assign({}, state, {
-        id: action.id
+        menu: action.payload
       });
     default:
       return state;
   }
-  return state;
 }

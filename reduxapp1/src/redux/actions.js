@@ -1,6 +1,8 @@
+export  const change_View = "Change_View";
+
 export function changeView(id) {
   return {
-    type: "Change_View",
-    id
+    type: change_View,
+    payload : id
   };
 }
